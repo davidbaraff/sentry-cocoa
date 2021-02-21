@@ -39,9 +39,12 @@ sentrycrashcpu_currentArch(void)
 {
     // This is blocking App Store submissions and must be worked around
     // TODO: Figure out a replacement
-    //    const NXArchInfo *archInfo = NXGetLocalArchInfo();
-    //    return archInfo == NULL ? NULL : archInfo->name;
-    return NULL;
+
+    // deb: while I wait, I will just work around this because I'm
+    // not using this from the app store...
+    const NXArchInfo *archInfo = NXGetLocalArchInfo();
+    return archInfo == NULL ? NULL : archInfo->name;
+    // return NULL;
 }
 
 #if SentryCrashCRASH_HAS_THREADS_API
