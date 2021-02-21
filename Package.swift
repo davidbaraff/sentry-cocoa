@@ -5,8 +5,8 @@ let package = Package(
     name: "Sentry",
     platforms: [
         .macOS(.v10_10),
-        .iOS(.v8),
-        .tvOS(.v9),
+        .iOS(.v11),
+        .tvOS(.v13),
         .watchOS(.v2),
     ],
     products: [
